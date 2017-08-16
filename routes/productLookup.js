@@ -6,6 +6,13 @@ var AWS_ID = process.env.AWS_ID || fail("cannot have an empty AWS_ID");
 var AWS_SECRET = process.env.AWS_SECRET || fail("cannot have an empty AWS_SECRET");
 var AWS_ASSOCID = process.env.AWS_ASSOCID || fail("cannot have an empty AWS_ASSOCID");
 
+function fail(err) {
+  if (typeof err === 'string') {
+    err = new Error(err);
+  }
+  throw err;
+}
+
 const opHelper = new OperationHelper({
     awsId:     AWS_ID,
     awsSecret: AWS_SECRET,
