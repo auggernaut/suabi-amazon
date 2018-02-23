@@ -31,7 +31,7 @@ router.get('/:id', function(req, res, next) {
       res.send(response.result.ItemLookupResponse.Items.Item);
   }).catch((err) => {
       console.error("Something went wrong! ", err);
-      res.send('Failsauce');
+      res.send(err);
   });
 });
 
