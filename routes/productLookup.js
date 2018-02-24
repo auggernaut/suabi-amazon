@@ -26,7 +26,7 @@ router.get('/:id', function(req, res, next) {
     // 'IdType': 'ASIN&',
     'ResponseGroup': 'Images'
   }).then((response) => {
-      // console.log("Results object: ", response.result);
+      console.log("Results object: ", response.result);
       // console.log("Raw response body:", response.responseBody);
       res.send(response.result.ItemLookupResponse.Items.Item);
   }).catch((err) => {
