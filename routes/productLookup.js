@@ -24,7 +24,7 @@ router.get('/:id', function(req, res, next) {
   opHelper.execute('ItemLookup', {
     'ItemId': req.params.id,
     // 'IdType': 'ASIN&',
-    'ResponseGroup': 'Images'
+    'ResponseGroup': 'Images, Small'
   }).then((response) => {
       console.log("Results object: ", response.result);
       // console.log("Raw response body:", response.responseBody);
